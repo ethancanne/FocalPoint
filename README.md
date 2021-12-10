@@ -15,6 +15,7 @@ A cross-platform application built using the React Native framework that helps p
 # How to try it out:
 
 **Web**
+
 Simply click this link: https://focalpointapp.herokuapp.com/ to try out the FocalPoint app in your browser.
 
 **Mobile**
