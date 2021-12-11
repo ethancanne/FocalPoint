@@ -36,7 +36,7 @@ export const Home = ({ addSubject, focusHistory, onClear }) => {
             title="Start"
             type={ButtonTypes.COMPLETE_BTN}
             onPress={() => {
-              addSubject(subject, 0);
+              addSubject(subject, 10);
               setSubject(null)
             }}
           />

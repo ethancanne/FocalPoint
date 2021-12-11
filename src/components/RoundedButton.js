@@ -20,6 +20,7 @@ export const RoundedButton = ({
       backgroundColor = '#8FA87F';
       color = 'white';
       break;
+
     case ButtonTypes.DESTRUCTIVE_BTN:
       backgroundColor = '#A60000';
       color = 'white';

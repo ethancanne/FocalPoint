@@ -40,7 +40,6 @@ export const Focus = ({ focusSubject, addSubject, onCountdownEnd, clearSubject, 
     onCountdownEnd()
     vibrate();
     setIsStarted(false);
-    setProgress(progress);
   };
 
   const onProgress = (progress) => {
@@ -52,6 +51,11 @@ export const Focus = ({ focusSubject, addSubject, onCountdownEnd, clearSubject, 
     setProgress(1);
     setIsStarted(false);
   };
+
+  useEffect(()=>{
+    onProgress((timeLeft)/startingMinutes);
+  }, [timeLeft])
+
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.focusSubjectTxt}>
@@ -68,17 +72,22 @@ export const Focus = ({ focusSubject, addSubject, onCountdownEnd, clearSubject, 
             setTimeLeft={setTimeLeft}
             onEnd={onEnd}
           />
-          
+          <ProgressBar
+            color="gray"
+            progress={progress}
+            style={{ height: 10 }}
+          />
         </View>
-
+        
         <Timing onChangeTime={changeTime} />
       </View>
       <View style={styles.startPauseBtnView}>
         <RoundedButton
-          width={Dimensions.get('window').width / 1.2}
+          width="80%"
+          height={60}
           type={ButtonTypes.NORMAL_BTN}
           title={isStarted ? 'Pause' : 'Start'}
-          style={{ marginTop: 50, padding: 20 }}
+          style={{ marginTop: 50, padding: 0 }}
           textStyle={{ fontSize: 30 }}
           onPress={() => {
             setIsStarted(!isStarted);

@@ -2,8 +2,8 @@ import { StyleSheet, Dimensions, Platform } from 'react-native';
 import {colors} from '../../utils/Colors'
 export const styles = StyleSheet.create({
   container: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    width: "100%",
+    height: Platform.OS === "web" ? "100vh" : Dimensions.get("window").height,
     backgroundColor: '#FFFFFF',
   },
 

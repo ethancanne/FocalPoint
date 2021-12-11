@@ -89,6 +89,8 @@ const App = () => {
     addFocusHistoryWithState(focusSubject, statuses.CANCELLED, minutes);
   };
 
+
+
   return (
     <View style={styles.container}>
       <Modal visible={focusSubject !== null} animationType="slide">

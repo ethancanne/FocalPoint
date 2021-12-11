@@ -6,7 +6,7 @@ const milToMinutes = (mil) => mil / 1000 / 60;
 const formatTime = (time) => (time < 10 ? `0${time}` : time);
 
 export const Countdown = ({ startingMinutes, setTimeLeft, isPaused, onProgress, onEnd, changeTime }) => {
-  const [mil, setMil] = useState(null);
+  const [mil, setMil] = useState(100);
   const [minutes, setMinutes] = useState(startingMinutes);
 
   const interval = useRef(null);
@@ -40,7 +40,6 @@ export const Countdown = ({ startingMinutes, setTimeLeft, isPaused, onProgress, 
   }, [startingMinutes]);
 
   useEffect(()=>{
-    onProgress(mil / minutesToMil(startingMinutes));
   },[mil])
 
   const formatCustomTime= (time)=>{

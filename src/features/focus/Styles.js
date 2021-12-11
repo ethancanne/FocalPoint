@@ -1,9 +1,9 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, Platform } from 'react-native';
 import {colors} from '../../utils/Colors'
 export const styles = StyleSheet.create({
   container: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    width: "100%",
+    height: Platform.OS === "web" ? "100vh" : Dimensions.get("window").height,
     backgroundColor: colors.lightSecondary,
   },
   focusSubjectTxt:{
@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
   btnAndTimerView:{
     position: "relative",
     backgroundColor: colors.primary,
-    width: Dimensions.get('window').width,
+    width: "100%",
     height: 180,
     marginTop: 100,
   },
@@ -29,14 +29,14 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.primary,
 
     height: 120,
-    width: Dimensions.get('window').width /1.5,
+    width: "50%",
     flex: 1,
     justifyContent: "flex-end",
     flexDirection: "column"
   },
 
   startPauseBtnView:{
-    width: Dimensions.get('window').width,
+    width: "100%",
     justifyContent: "center",
     alignItems: "center"
   },
@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     position: "absolute",
     bottom: 0,
-    width: Dimensions.get('window').width,
+    width: "100%",
     padding: 30,
     justifyContent: "space-between"
   }
