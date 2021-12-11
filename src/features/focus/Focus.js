@@ -68,11 +68,7 @@ export const Focus = ({ focusSubject, addSubject, onCountdownEnd, clearSubject, 
             setTimeLeft={setTimeLeft}
             onEnd={onEnd}
           />
-          <ProgressBar
-            color="gray"
-            progress={progress}
-            style={{ height: 10 }}
-          />
+          
         </View>
 
         <Timing onChangeTime={changeTime} />
@@ -80,7 +76,6 @@ export const Focus = ({ focusSubject, addSubject, onCountdownEnd, clearSubject, 
       <View style={styles.startPauseBtnView}>
         <RoundedButton
           width={Dimensions.get('window').width / 1.2}
-          height="40"
           type={ButtonTypes.NORMAL_BTN}
           title={isStarted ? 'Pause' : 'Start'}
           style={{ marginTop: 50, padding: 20 }}

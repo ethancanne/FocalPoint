@@ -15,8 +15,8 @@ export const Timing = ({
   return(
     <View style={styles.timingView}>
           <RoundedButton
-            width="90"
-            height="90"
+            width={90}
+            height={90}
             type={ButtonTypes.NORMAL_BTN2}
             title="10"
             style={{ marginLeft: 10, marginRight: 10, flex: 1 }}
@@ -26,8 +26,8 @@ export const Timing = ({
             textStyle={{ fontSize: 40 }}
           />
           <RoundedButton
-            width="90"
-            height="90"
+            width={90}
+            height={90}
             type={ButtonTypes.NORMAL_BTN2}
             title="15"
             style={{ marginLeft: 10, marginRight: 10, flex: 1 }}
@@ -37,8 +37,8 @@ export const Timing = ({
             textStyle={{ fontSize: 40 }}
           />
           <RoundedButton
-            width="90"
-            height="90"
+            width={90}
+            height={90}
             type={ButtonTypes.NORMAL_BTN2}
             title="20"
             style={{ marginLeft: 10, marginRight: 10, flex: 1 }}
